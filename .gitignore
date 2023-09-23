@@ -7,16 +7,16 @@
 *.pot
 *.pyc
 _pycache_/
-*/__pycache__/
-//__pycache__/
+*/_pycache_/
+//_pycache_/
 
 migrations/*.py
 /migrations/.py
 //migrations/*.py
 
-!migrations/__init__.py
-!*/migrations/__init__.py
-!*/*/migrations/__init__.py
+!migrations/_init_.py
+!*/migrations/_init_.py
+!//migrations/_init_.py
 
 local_settings.py
 db.sqlite3

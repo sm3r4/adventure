@@ -6,7 +6,7 @@ class Rides(models.Model):
     ride_title=models.CharField(max_length=120)
     location=models.CharField(max_length=70)
     date=models.CharField(max_length=120)
-    adv_img = models.ImageField(upload_to='images/')
+    adv_img = models.URLField()
     adv_desc = models.TextField()
     b1_color= models.CharField(max_length=9)
     b2_color = models.CharField(max_length=9)

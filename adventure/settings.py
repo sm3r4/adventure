@@ -27,7 +27,6 @@ SECRET_KEY = 'django-insecure-#fimg!84xq_mgn_=s6jz7td72qhodac0goay^lnmdcc5gh7ca=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-
 ALLOWED_HOSTS = ['*']
 
 
@@ -51,7 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'adventure.urls'
 
@@ -77,8 +78,14 @@ WSGI_APPLICATION = 'adventure.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
-    'default': dj_database_url.config(default='your_default_database_url')
+    'default': dj_database_url.config(default='postgres://ridesdb_user:y5WyRRQeT96AlfX1i747pZ427Y59fPzl@dpg-ck0o0bj6fquc738ldk40-a.oregon-postgres.render.com/ridesdb')
 }
 
 
@@ -128,4 +135,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
 )
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
