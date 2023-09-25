@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'adventure.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://ridesdb_user:y5WyRRQeT96AlfX1i747pZ427Y59fPzl@dpg-ck0o0bj6fquc738ldk40-a.oregon-postgres.render.com/ridesdb')
+    'default': dj_database_url.config(default='postgres://ridedb_user:mkxRPy0OXhILbOCJF1elx4pwlIrJdX4s@dpg-ck84l6nq54js73akvptg-a.oregon-postgres.render.com/ridedb')
 }
 
 # Password validation

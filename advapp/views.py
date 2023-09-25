@@ -9,7 +9,7 @@ def index(request):
     context= {
         'rides' : rides
     }
-    return render(request,'adventsites/index.html',context)
+    return render(request,'adventure/index.html',context)
 
 def details(request,pk):
     ride=Rides.objects.get(pk=pk)
@@ -24,4 +24,4 @@ def details(request,pk):
         'ride' : ride,
         'form' : form
     }
-    return render(request,'adventsites/details.html',context)
+    return render(request,'adventure/details.html',context)

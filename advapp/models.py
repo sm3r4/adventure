@@ -8,8 +8,6 @@ class Rides(models.Model):
     date=models.CharField(max_length=120)
     adv_img = models.URLField()
     adv_desc = models.TextField()
-    b1_color= models.CharField(max_length=9)
-    b2_color = models.CharField(max_length=9)
     def __str__(self):
         return self.ride_title 
 
