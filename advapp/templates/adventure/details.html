@@ -21,12 +21,12 @@
         </nav>
     </header>
     <section id="Eventsec">
-        <div class="bung" style="background-color: {{ride.b1_color}};">
+        <div class="bung" style="background-color: #00000048;">
             
             <h2>{{ride.ride_title}}</h2>
             <p style="color: aliceblue;">Apply for this</p>
             <p style="color: aliceblue;" class="event-desc">{{ride.adv_desc}}</p>
-            <form action="{% url 'details' ride.adv_id %}" method="POST" id="f1" style="background-color: {{ride.b2_color}};">
+            <form action="{% url 'details' ride.adv_id %}" method="POST" id="f1" style="background-color: #0000007A;">
                 {% csrf_token %}
                 {{form.as_p}}
                 <input type="submit" value="apply">
